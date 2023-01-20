@@ -6,9 +6,9 @@
 // a = 9, b = -3 -> да
 // a = -3 b = 9 -> нет
 
-Console.WriteLine("Введите число a: ");
+Console.WriteLine("Введите первое число для проверки, является ли оно квадратом второго: ");
 int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число b: ");
+Console.WriteLine("Введите второе число: ");
 int b = Convert.ToInt32(Console.ReadLine());
 if (a / b == b)
 {

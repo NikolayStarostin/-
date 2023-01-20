@@ -6,9 +6,9 @@
 // 8 -> 2, 4, 6, 8
 
 Console.WriteLine("Введите число: ");
-int N = Convert.ToInt32(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
 int number = 2;
-while (number <= N)
+while (number <= n)
 {
     if (number % 2 == 0)
         Console.WriteLine(number + " ");

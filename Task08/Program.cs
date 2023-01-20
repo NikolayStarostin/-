@@ -7,24 +7,36 @@
 
 Console.WriteLine("Введите число: ");
 int N = Convert.ToInt32(Console.ReadLine());
-if (N > 1)
+int number = 2;
+while (number <= N)
 {
-    int count = 1 + 1;
-    while (count <= N)
-    {
-        Console.WriteLine(count + " ");
-        count++;
-        if (count % 2 == 0) // в данном проверка нужна только для того,
-        {                   // чтобы в случае числовых значение 1, 2, 5, 7, 8, 9, 10
-            return;         // count += 2 не выводил ошибочно нечетные значение
-        }
-        else
-        {
-            count++;
-        }
-    }
+    if (number % 2 == 0)
+        Console.WriteLine(number + " ");
+    number++;
 }
-else
-    {
-        Console.WriteLine("Введено некорректное значение, число должно быть больше 1");
-    }
+
+
+// **ЧЕРНОВИК АЛЬТЕРНАТИВНЫЙ ВАРИАНТ**
+// Console.WriteLine("Введите число: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// if (N > 1)
+// int number = 2;
+// {
+//         while (number <= N)
+//     {
+//         Console.WriteLine(number + " ");
+//         number++;
+//         if (number % 2 == 0) // в данном проверка нужна только для того,
+//         {                   // чтобы в случае числовых значение 1, 2, 5, 7, 8, 9, 10
+//             return;         // number += 2 не выводил ошибочно нечетные значение
+//         }
+//         else
+//         {
+//             number++;
+//         }
+//     }
+// }
+// else
+//     {
+//         Console.WriteLine("Введено некорректное значение, число должно быть больше 1");
+//     }

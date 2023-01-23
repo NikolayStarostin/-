@@ -5,5 +5,16 @@
 // 782 -> 72
 // 918 -> 98
 
-int [] array = new [array] Random().Next(100, 1000);
-Console.WriteLine(array {0},{2});
+int number = new Random().Next(100, 1000);
+
+int res = RemoveSecondDigit(number);
+
+Console.WriteLine($"{number} -> {res}");
+
+int RemoveSecondDigit(int num)
+{
+    int num1 = number / 100;
+    int num3 = number % 10;
+    int result = num1 * 10 + num3;
+    return result;
+}

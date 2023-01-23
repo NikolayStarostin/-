@@ -7,12 +7,15 @@
 // 34, 5 -> не кратно, остаток 4
 // 16, 4 -> кратно
 
-Console.WriteLine("Введите число a: ");
+Console.WriteLine("Введите первое число: ");
 int firstDigit = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число b: ");
+Console.WriteLine("Введите второе число: ");
 int secondDigit = Convert.ToInt32(Console.ReadLine());
-int remains = firstDigit % secondDigit;
-if (firstDigit / secondDigit == 0)
-    Console.WriteLine($"Кратно");
+
+if (firstDigit % secondDigit == 0)
+    Console.WriteLine("Кратно");
 else
-    Console.WriteLine($"Некратно, {remains}");
+{
+    int remains = firstDigit % secondDigit;
+    Console.WriteLine($"Некратно, остаток {remains}");
+}

@@ -11,7 +11,7 @@ void SquareTable(int x)
     int count = 1;
     while (count <= x)
     {
-        Console.WriteLine($"|{count,2} | {Math.Pow(count, 2),2}|");
+        Console.WriteLine($"|{count,5} | {Math.Pow(count, 2),5}|");
         count++;
     }
 }

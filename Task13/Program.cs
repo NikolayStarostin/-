@@ -13,14 +13,16 @@ int ResultThirdDigit(int number)
         while (number > 999)
             number = number / 10;
         count++;
-    return (number % 10);
+    return number % 10;
 }
 
 
 Console.WriteLine("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int oldnumber = number;
+
 number = Math.Abs(number);
+
 int res = ResultThirdDigit(number);
 
 if (number > -100 && number < 100)

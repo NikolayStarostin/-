@@ -7,6 +7,7 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 //=================================================================
+
 int ResultThirdDigit(int number)
 {
     int count = 0;
@@ -24,8 +25,8 @@ Console.WriteLine("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int oldnumber = number;
 number = Math.Abs(number);
-
 int res = ResultThirdDigit(number);
+
 if (number > -100 && number < 100)
 {
     Console.WriteLine("Третьей цифры нет");

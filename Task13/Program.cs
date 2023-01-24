@@ -7,17 +7,13 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 //=================================================================
-
 int ResultThirdDigit(int number)
 {
     int count = 0;
-        {
         while (number > 999)
             number = number / 10;
         count++;
-    }
-    int result = number % 10;
-    return result;
+    return (number % 10);
 }
 
 
@@ -28,10 +24,6 @@ number = Math.Abs(number);
 int res = ResultThirdDigit(number);
 
 if (number > -100 && number < 100)
-{
     Console.WriteLine("Третьей цифры нет");
-}
 else
-{
     Console.WriteLine($"Третья цифра числа {oldnumber} -> {res}");
-}

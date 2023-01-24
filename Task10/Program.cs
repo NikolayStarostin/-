@@ -8,23 +8,18 @@
 // 782 -> 8
 // 918 -> 1
 // =========================================================
-
 int ResultSecondDigit(int number)
 {
-    int result = (number / 10) % 10;
-    return result;
+    return (number / 10) % 10;
 }
 
 
 Console.WriteLine("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
+
 int res = ResultSecondDigit(number);
 
 if (number > 99 && number < 1000)
-{
     Console.WriteLine($"Вторая цифра числа {number} -> {res}");
-}
 else
-{
     Console.WriteLine("Введено некорректное значение");
-}

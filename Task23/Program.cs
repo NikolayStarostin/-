@@ -6,10 +6,10 @@
 // 5 -> 1, 8, 27, 64, 125
 //=======================================================
 
-void CubeTable(int x)
+void CubeTable(int num)
 {
     int count = 1;
-    while (count <= x)
+    while (count <= num)
     {
         Console.WriteLine($"+----+------+");
         Console.WriteLine($"|{count, 3} | {Math.Pow(count, 3),-5}|");
@@ -19,6 +19,9 @@ void CubeTable(int x)
 }
 
 Console.WriteLine("Введите число:");
-int x = Convert.ToInt32(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
 
-CubeTable(x);
+if (number < 1)
+    Console.WriteLine("Некорректный ввод");
+else
+    CubeTable(number);

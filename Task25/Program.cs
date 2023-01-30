@@ -17,18 +17,14 @@ void Degree(int a, int b)
 }
 
 Console.WriteLine("Введите первое число:");
-int number1 = Convert.ToInt32(Console.ReadLine());
+float number1 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите второе число:");
-int number2 = Convert.ToInt32(Console.ReadLine());
+float number2 = Convert.ToInt32(Console.ReadLine());
 
-if (number2 < 0)
-{
-    Console.WriteLine("Введите натуральное число");
-}
+if (number2 < 0) Console.WriteLine("Введите натуральное число");
 else
-    if (number2 % 1 == 0)
-    {
-        Degree (number1, number2);
-    }
+{
+    if (number2 % 1 == 0) Degree(number1, number2);
     else Console.WriteLine("Введите целое число");
+}

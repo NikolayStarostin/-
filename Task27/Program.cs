@@ -33,5 +33,7 @@ void SumOfNumbers(int n, int len)
 Console.WriteLine("Введите число:");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int len = NumberLen(number);
-SumOfNumbers(number, len);
+// int len = NumberLen(number);
+// SumOfNumbers(number, len);
+
+SumOfNumbers(number, NumberLen(number));

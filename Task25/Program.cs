@@ -17,10 +17,10 @@ void Degree(int a, int b)
 }
 
 Console.WriteLine("Введите первое число:");
-float number1 = Convert.ToInt32(Console.ReadLine());
+int number1 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите второе число:");
-float number2 = Convert.ToInt32(Console.ReadLine());
+int number2 = Convert.ToInt32(Console.ReadLine());
 
 if (number2 < 0) Console.WriteLine("Введите натуральное число");
 else

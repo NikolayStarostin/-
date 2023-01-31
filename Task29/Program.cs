@@ -31,5 +31,4 @@ void PrintArray(int[] array)
     Console.Write($"{array[array.Length - 1]}]");
 }
 
-int[] arr = CreateArray(8);
-PrintArray(arr);
+PrintArray(CreateArray(8));

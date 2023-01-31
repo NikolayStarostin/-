@@ -5,8 +5,6 @@
 // 1, 2, 5, 7, 19, 6, 1, 33 -> [1, 2, 5, 7, 19, 6, 1, 33]
 //===============================================================
 
-int[] arr = CreateArray(8);
-PrintArray(arr);
 
 int[] CreateArray(int size)
 {
@@ -14,15 +12,24 @@ int[] CreateArray(int size)
     Random rnd = new Random();
     for (int i = 0; i < size; i++)
     {
-        array[i] = rnd.Next(0, 2);
+        array[i] = rnd.Next(0, 100);
     }
     return array;
 }
 
 void PrintArray(int[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length - 1; i++)
     {
-        Console.Write($"{array[i]} ");
+        Console.Write($"{array[i]}, ");
     }
+    Console.Write($"{array[array.Length - 1]} -> [");
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+    Console.Write($"{array[array.Length - 1]}]");
 }
+
+int[] arr = CreateArray(8);
+PrintArray(arr);

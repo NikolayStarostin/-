@@ -20,7 +20,6 @@ int[] CreateArray(int size)
 
 int FindPositiveNumbers(int[] arr)
 {
-    {
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
     {
@@ -28,7 +27,6 @@ int FindPositiveNumbers(int[] arr)
             count++;
     }
     return count;
-    }
 }
 
 void PrintArray(int[] arr)

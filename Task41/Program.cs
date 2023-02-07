@@ -7,15 +7,28 @@
 // ==============================================================
 
 
-int[] CreateArray(int size, int min, int max)
+int[] CreateArray(int size)
 {
     int[] array = new int[size];
-    Random rnd = new Random();
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rnd.Next(min, max);
+        Console.Write($"Введите значение {i} элемента массива: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
     }
     return array;
+}
+
+int FindPositiveNumbers(int[] arr)
+{
+    {
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > 0)
+            count++;
+    }
+    return count;
+    }
 }
 
 void PrintArray(int[] arr)
@@ -29,7 +42,10 @@ void PrintArray(int[] arr)
     Console.Write("]");
 }
 
-
-Console.WriteLine("Задайте размер массива:");
-int size = Convert.ToInt32(Console.ReadLine());
-int[] arr = CreateArray(size, -1000, 1000);
+Console.Write("Задайте размер массива: ");
+int rate = Convert.ToInt32(Console.ReadLine());
+int[] array = CreateArray(rate);
+int positivenumbers = FindPositiveNumbers(array);
+Console.WriteLine();
+PrintArray(array);
+Console.Write($" -> {positivenumbers}");

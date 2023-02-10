@@ -42,7 +42,7 @@ void PrintMatrix(int[,] matrix)
 
 void FindPosition(int[,] matrix, int idrows, int idcolumns)
 {
-    if ((idrows < matrix.GetLength(0)) && (idcolumns <= matrix.GetLength(1)))
+    if ((idrows < matrix.GetLength(0)) && (idcolumns < matrix.GetLength(1)))
         Console.WriteLine($"Элемент [{idrows}, {idcolumns}] -> {matrix[idrows, idcolumns]}");
     else
         Console.WriteLine($"[{idrows}, {idcolumns}] -> такого элемента в массиве нет");

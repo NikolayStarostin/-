@@ -38,7 +38,7 @@ int[] CreateRndArray(int[] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        int rnd = new Random().Next(10, 100);
+        int rnd = new Random().Next(0, array.GetLength(0)-1);
         int temp = array[rnd];
         array[rnd] = array[i];
         array[i] = temp;
@@ -54,7 +54,7 @@ int[,,] Create3DArray(int rows, int columns, int depths, int[] rndArray)
     {
         for (int j = 0; j < columns; j++)
         {
-            for (int k = 0; j < depths; k++)
+            for (int k = 0; k < depths; k++)
             {
                 array[i, j, k] = rndArray[rndNumbers];
             }

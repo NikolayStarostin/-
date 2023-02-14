@@ -10,6 +10,7 @@
 // 34(1,0,0) 26(1,0,1) 41(1,1,0) 55(1,1,1)
 // ==============================================================
 
+
 void IncorrectValue()
 {
     Console.WriteLine("Введено некорректное значение.");
@@ -37,7 +38,7 @@ int[] CreateRndArray(int[] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        int rnd = new Random().Next(0, 90);
+        int rnd = new Random().Next(10, 100);
         int temp = array[rnd];
         array[rnd] = array[i];
         array[i] = temp;
@@ -48,7 +49,7 @@ int[] CreateRndArray(int[] array)
 int[,,] Create3DArray(int rows, int columns, int depths, int[] rndArray)
 {
     int rndNumbers = 0;
-    int[,,] array = new int [rows, columns, depths];
+    int[,,] array = new int[rows, columns, depths];
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
@@ -88,14 +89,14 @@ if (columns <= 0) IncorrectValue();
 Console.Write("Введите глубину: ");
 int depth = UserInput();
 if (depth <= 0) IncorrectValue();
-if (rows*columns*depth > 90)
+if (rows * columns * depth > 90)
 {
-    Console.WriteLine ("Превышен размер массива");
+    Console.WriteLine("Превышен размер массива");
     return;
 }
 
 int[] array1D = CreateTwoDigitNonRepeatingArray(rows * columns * depth);
 int[] rndArray = CreateRndArray(array1D);
 int[,,] array3D = Create3DArray(rows, columns, depth, rndArray);
-Console.WriteLine ();
+Console.WriteLine();
 Print3DArray(array3D);

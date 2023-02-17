@@ -21,9 +21,11 @@ int UserInput()
 
 int SumNumbers(int m, int n)
 {
-    if (m == n) return n;
-    n += SumNumbers (m, n-1);
-    return n;
+    if (m < 0) IncorrectValue();
+    if (n < 0) IncorrectValue();
+    if (m > n) return m += SumNumbers(m - 1, n);
+    if (m < n) return n += SumNumbers(m, n - 1);
+    else return m;
 }
 
 
@@ -31,7 +33,6 @@ Console.Write("Введите натуральное число M: ");
 int numberM = UserInput();
 Console.Write("Введите натуральное число N: ");
 int numberN = UserInput();
-if (numberM < 0 && numberN < 0) IncorrectValue();
-if (numberM % 1 != 0 && numberN % 1 != 0) IncorrectValue();
 int sumNumbers = SumNumbers(numberM, numberN);
-Console.Write($"Сумма чисел от {numberM} до {numberN} = {sumNumbers}");
+if (numberM == numberN) Console.Write($"Сумма натуральных элементов {numberM - numberN}");
+else Console.Write($"Сумма натуральных элементов {sumNumbers}");

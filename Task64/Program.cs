@@ -21,9 +21,12 @@ int UserInput()
 
 void NaturalNumber(int num, int min)
 {
-    if (num == 0) return;
+    if (num == 1)
+    {
+        Console.Write($"{min}\"");
+        return;
+    }
     Console.Write($"{num}, ");
-    if (num > min +1)
     NaturalNumber(num - 1, min);
 }
 
@@ -32,7 +35,6 @@ Console.Write("Введите натуральное число: ");
 int number = UserInput();
 int minnumber = 1;
 if (number < 0) IncorrectValue();
-if (number % 1 !=0) IncorrectValue();
+if (number % 1 != 0) IncorrectValue();
 Console.Write($"N = {number} -> \"");
 NaturalNumber(number, minnumber);
-Console.Write($"{minnumber}\"");

@@ -34,5 +34,5 @@ int numberM = UserInput();
 Console.Write("Введите натуральное число N: ");
 int numberN = UserInput();
 int sumNumbers = SumNumbers(numberM, numberN);
-if (numberM == numberN) Console.Write($"Сумма натуральных элементов {numberM - numberN}");
+if (numberM == numberN) Console.Write($"Сумма натуральных элементов {numberM}");
 else Console.Write($"Сумма натуральных элементов {sumNumbers}");

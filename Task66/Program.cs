@@ -19,20 +19,25 @@ int UserInput()
     return temp;
 }
 
-int SumNumbers(int m, int n)
+int SumNumbers(int start, int end)
 {
-    if (m < 0) IncorrectValue();
-    if (n < 0) IncorrectValue();
-    if (m > n) return m += SumNumbers(m - 1, n);
-    if (m < n) return n += SumNumbers(m, n - 1);
-    else return m;
+    return start == end ? end : start + SumNumbers(start + 1, end);
 }
 
 
 Console.Write("Введите натуральное число M: ");
 int numberM = UserInput();
+if (numberM < 0) IncorrectValue();
+
 Console.Write("Введите натуральное число N: ");
 int numberN = UserInput();
-int sumNumbers = SumNumbers(numberM, numberN);
-if (numberM == numberN) Console.Write($"Сумма натуральных элементов {numberM}");
-else Console.Write($"Сумма натуральных элементов {sumNumbers}");
+if (numberN < 0) IncorrectValue();
+
+int sum = 0;
+
+if (numberM > numberN)
+    sum = SumNumbers(numberN, numberM);
+else
+    sum = SumNumbers(numberM, numberN);
+
+Console.Write($"Сумма натуральных элементов {sum}");
